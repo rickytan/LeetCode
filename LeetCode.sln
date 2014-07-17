@@ -105,6 +105,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "search-a-2d-matrix", "searc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "search-in-rotated-sorted-array", "search-in-rotated-sorted-array\search-in-rotated-sorted-array.vcproj", "{E44D829A-4BF9-4795-B44F-E98A8E7E9A2F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "insertion-sort-list", "insertion-sort-list\insertion-sort-list.vcproj", "{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "insert-interval", "insert-interval\insert-interval.vcproj", "{56997321-FDBB-47A2-A665-E8BB030A0E4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -319,6 +323,14 @@ Global
 		{E44D829A-4BF9-4795-B44F-E98A8E7E9A2F}.Debug|Win32.Build.0 = Debug|Win32
 		{E44D829A-4BF9-4795-B44F-E98A8E7E9A2F}.Release|Win32.ActiveCfg = Release|Win32
 		{E44D829A-4BF9-4795-B44F-E98A8E7E9A2F}.Release|Win32.Build.0 = Release|Win32
+		{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}.Debug|Win32.Build.0 = Debug|Win32
+		{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}.Release|Win32.ActiveCfg = Release|Win32
+		{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}.Release|Win32.Build.0 = Release|Win32
+		{56997321-FDBB-47A2-A665-E8BB030A0E4E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56997321-FDBB-47A2-A665-E8BB030A0E4E}.Debug|Win32.Build.0 = Debug|Win32
+		{56997321-FDBB-47A2-A665-E8BB030A0E4E}.Release|Win32.ActiveCfg = Release|Win32
+		{56997321-FDBB-47A2-A665-E8BB030A0E4E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="insertion-sort-list"
-	ProjectGUID="{A28AEB44-5512-43DC-AB54-CC1451B1CF7C}"
-	RootNamespace="insertionsortlist"
+	Name="insert-interval"
+	ProjectGUID="{56997321-FDBB-47A2-A665-E8BB030A0E4E}"
+	RootNamespace="insertinterval"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
