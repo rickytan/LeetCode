@@ -22,18 +22,6 @@ public:
         splitList(head, count, first, second);
         head = mergeList(first, second);
         return head;
-        /*
-        ListNode *p = head;
-        ListNode *next = head->next;
-        p->next = NULL;
-        while (next) {
-            ListNode *n = next;
-            next = next->next;
-            n->next = NULL;
-            head = insertNode(head, n);
-        }
-        return head;
-        */
     }
 
     void splitList(ListNode *head, int count, ListNode *&first, ListNode *&second) {
@@ -51,9 +39,9 @@ public:
         second = head;
 
         ListNode *f = NULL, *s = NULL;
-        splitList(first, count / 2, f, s);
+        splitList(first, countNode(first), f, s);
         first = mergeList(f, s);
-        splitList(second, count / 2, f, s);
+        splitList(second, countNode(second), f, s);
         second = mergeList(f, s);
     }
 
@@ -65,20 +53,24 @@ public:
         ListNode *head = &dummy;
         ListNode *q, *p;
         while (first && second) {
-            p = first->next;
-            q = second->next;
+            p = first;
+            q = second;
             if (first->val < second->val) {
                 head->next = first;
                 head = first;
-                first = p;
+                first = first->next;
             }
             else {
                 head->next = second;
                 head = second;
-                second = q;
+                second = second->next;
             }
         }
-        return head;
+        if (!second)
+            head->next = p;
+        if (!first)
+            head->next = q;
+        return dummy.next;
     }
 
     int countNode(ListNode *head) {
@@ -88,24 +80,6 @@ public:
             head = head->next;
         }
         return count;
-    }
-
-    ListNode *insertNode(ListNode *head, ListNode *node) {
-        ListNode *p = head;
-        ListNode *q = NULL;
-        while (p && p->val < node->val) {
-            q = p;
-            p = p->next;
-        }
-        if (q == NULL) {
-            node->next = head;
-            head = node;
-        }
-        else {
-            node->next = p;
-            q->next = node;
-        }
-        return head;
     }
 };
 
