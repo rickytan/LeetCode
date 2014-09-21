@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <map>
 
 using namespace std;
 
@@ -9,37 +10,28 @@ public:
         int length = s.length();
         if (length == 0)
             return 0;
-        int result = 1;
-        int max = 0;
+
+        int maxLength = 0;
+        map<char, int> m;
         int start = 0;
-        for (int i=1;i<length;++i)
+        for (int i=0;i<length;++i)
         {
-            string sub = s.substr(start, i - start);
             char ch = s[i];
-            int pos = sub.find_last_of(ch);
-            if (pos == string::npos) {
-                ++result;
+            if (m.count(ch)) {
+                maxLength = std::max(maxLength, i - start);
+                start = std::max(start, m[ch] + 1);
             }
-            else {
-                for (int j=i - pos; j >= max;--j)
-                {
-                    string sub = s.substr(i - j, j);
-                    if (s.find(sub) == string::npos)
-                        ++result;
-                }
-                start = pos + 1;
-                max = std::max(max, result);
-                result = 1;
-            }
+            m[ch] = i;
         }
-        return std::max(result, max);
+        maxLength = std::max(maxLength, length - start);
+        return maxLength;
     }
 };
 
 int main()
 {
     Solution s;
-    string str = "wlrbbmqbhcdarzowkkyhiddqscdxrjmowfrxsjybldbefsarcbynecdyggxxpklorellnmpapqfwkhopkmco";
+    string str = "qopubjguxhxdipfzwswybgfylqvjzhar";
     cout << s.lengthOfLongestSubstring(str) << endl;
     return 0;
 }
