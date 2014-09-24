@@ -161,6 +161,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "word-search", "word-search\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "longest-palindromic-substring", "longest-palindromic-substring\longest-palindromic-substring.vcproj", "{3940D52E-A953-48BB-A3FF-88D51B8793E6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gray-code", "gray-code\gray-code.vcproj", "{E67E20D6-50A0-4914-9B63-4CA6D30E550C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "word-ladder", "word-ladder\word-ladder.vcproj", "{AEB71EC3-D0E2-484E-BEC3-58157163D93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -487,6 +491,14 @@ Global
 		{3940D52E-A953-48BB-A3FF-88D51B8793E6}.Debug|Win32.Build.0 = Debug|Win32
 		{3940D52E-A953-48BB-A3FF-88D51B8793E6}.Release|Win32.ActiveCfg = Release|Win32
 		{3940D52E-A953-48BB-A3FF-88D51B8793E6}.Release|Win32.Build.0 = Release|Win32
+		{E67E20D6-50A0-4914-9B63-4CA6D30E550C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E67E20D6-50A0-4914-9B63-4CA6D30E550C}.Debug|Win32.Build.0 = Debug|Win32
+		{E67E20D6-50A0-4914-9B63-4CA6D30E550C}.Release|Win32.ActiveCfg = Release|Win32
+		{E67E20D6-50A0-4914-9B63-4CA6D30E550C}.Release|Win32.Build.0 = Release|Win32
+		{AEB71EC3-D0E2-484E-BEC3-58157163D93D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AEB71EC3-D0E2-484E-BEC3-58157163D93D}.Debug|Win32.Build.0 = Debug|Win32
+		{AEB71EC3-D0E2-484E-BEC3-58157163D93D}.Release|Win32.ActiveCfg = Release|Win32
+		{AEB71EC3-D0E2-484E-BEC3-58157163D93D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

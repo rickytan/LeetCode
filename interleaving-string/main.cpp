@@ -2,34 +2,37 @@
 #include <iostream>
 #include <map>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
     bool isInterleave(string s1, string s2, string s3) {
-        int p1 = 0, p2 = 0;
-        stack<int> rewind1;
-        stack<int> rewind2;
-        for (int i=0; i<s3.length() ;++i)
+        if(s3.length() != s1.length() + s2.length())
+            return false;
+
+        vector<vector<bool> > table(s1.length() + 1, vector<bool>(s2.length() + 1, false));
+        
+        for (int i=0; i<= s1.length(); ++i)
         {
-            if (s1[p1] == s3[i] &&
-                s2[p2] == s3[i]) {
-                rewind1.push(p1);
-                rewind2.push(p2);
-                p1++;
-            }
-            else if (s1[p1] == s3[i]) {
-                p1++;
-            }
-            else if (s2[p2] == s3[i]) {
-                p2++;
-            }
-            else {
-                return false;
+            for (int j=0; j<=s2.length(); ++j)
+            {
+                if (i == 0 && j == 0) {
+                    table[i][j] = true;
+                }
+                else if (i == 0) {
+                    table[i][j] = table[i][j-1] && s2[j-1] == s3[i+j-1];
+                }
+                else if (j == 0) {
+                    table[i][j] = table[i-1][j] && s1[i-1] == s3[i+j-1];
+                }
+                else {
+                    table[i][j] = table[i][j-1] && s2[j-1] == s3[i+j-1] || table[i-1][j] && s1[i-1] == s3[i+j-1];
+                }
             }
         }
-        return isInter(s1.c_str(), s2.c_str(), s3.c_str());
+        return table[s1.length()][s2.length()];
     }
 
     bool isInter(const char *s1, const char *s2, const char *s3) {
